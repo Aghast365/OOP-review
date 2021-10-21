@@ -10,7 +10,7 @@ class Account:
 
     @classmethod
     def read_from_csv(cls): #class method that gets accounts from the csv file and adds them to all_accounts
-        with open("support\\accounts.csv") as csv_file: 
+        with open("support/accounts.csv") as csv_file: 
             csv_reader = csv.DictReader(csv_file, ["id","balance","date_opened"]) #if a csv file has no fieldnames, ones can be passed as a list into DictReader
             for row in csv_reader:
                 new_account = Account(**row) # the spread operator (**) allows the dict to be passed as a set of arguments
